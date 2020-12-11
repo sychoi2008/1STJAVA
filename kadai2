@@ -1,0 +1,107 @@
+/* 1부터 10 출력
+   for(int i = 1; i<=10; i++)
+      System.out.println(i);
+
+   int j = 1;
+   while(j<=10){
+      System.out.println(j);
+      j++;
+   }
+ */
+
+
+/* 10~1 print
+  for(int i = 10; i>=1; i--){
+    System.out.println(i);
+   }
+*/
+
+
+/* 짝수 출력
+  for(int i=1; i<=10; i++){
+      if(i%2==0) System.out.println(i);
+  }
+
+   int j = 1;
+   while(j<=10){
+      if(j%2==0) System.out.println(j);
+      j++;
+   }
+*/
+
+
+/* 홀수 출력
+   for(int i=1; i<=10; i++){
+       if(i%2!=0) System.out.println(i);
+   }
+   
+   int j = 1;
+   while(j<=10){
+      if(j%2!=0) System.out.println(j);
+      j++;
+    }
+*/
+
+
+/* 1~10 더하기
+   int sum = 0;
+   for(int i=1; i<=10; i++) sum+=i;
+   System.out.println(sum);
+ */
+
+
+ /* a~z 반복문 char에는 숫자가 들어갈 수 있기 때문에
+    char a = 'a';
+    for(; a<='z'; ) System.out.println(a++);
+
+    for(char i = 'a'; i<='z'; i++){
+        System.out.println(i);
+    }
+ */
+ 
+
+/* 입력받은 값까지
+   int fini = scanner.nextInt();
+   for(int i = 1; i<=fini; i++) System.out.println(i);
+*/
+
+
+/* 두개의 정수를 입력받아서 작은 수부터 큰 수까지를 반복문을 사용하여 출력하기
+   int num1 = scanner.nextInt();
+   int num2 = scanner.nextInt();
+
+   int big = (num1 > num2)? num1 : num2;
+   int small = (num1 < num2)? num1 : num2;
+
+   for(int i = small; i<=big; i++){
+      System.out.println(i);
+        }
+*/
+
+//별출력
+/*
+  int star = scanner.nextInt();
+  for(int i =1; i<=star; i++) System.out.print("*");      
+*/
+       
+       
+/*
+ int star = scanner.nextInt();
+ for(int i = 1; i<=star ; i++){
+     for(int j = 1; j<=star; j++){
+         System.out.print("*");
+  }
+  System.out.println();
+}
+*/
+
+
+/*
+  int star = scanner.nextInt();
+  for(int i = 1; i<=star ; i++){
+      for(int j = 1; j<=i; j++){
+          System.out.print("*");
+       }
+      System.out.println();
+   }
+*/
