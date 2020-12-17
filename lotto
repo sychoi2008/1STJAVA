@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class MyClass {
+    public static Scanner scanner = new Scanner(System.in);
+    public static void main(String args[]) {
+        int [] numbers = new int[6];
+        Random random = new Random();
+        for(int i = 0; i<6; i++) {
+           numbers[i] = random.nextInt(45)+1;
+        }
+        // 오름차순
+        for(int j = 0; j<numbers.length; j++){
+            for(int m = j+1; m<numbers.length; m++) {
+                if(numbers[j]>numbers[m]) {
+                    int tmp = numbers[j];
+                    numbers[j] = numbers[m];
+                    numbers[m] = tmp;
+                }
+            }
+        }
+        for(Integer number : numbers) {
+            System.out.println(number);
+        }
+        System.out.println();
+        // 내림차순
+        for(int j = 0; j<numbers.length; j++) {
+            for(int m = j+1; m<numbers.length; m++) {
+                if(numbers[j]<numbers[m])  {
+                    int tmp = numbers[j];
+                    numbers[j] = numbers[m];
+                    numbers[m] = tmp;
+                }
+            }
+        }
+        for(Integer number : numbers) {
+            System.out.println(number);
+        }
+    }
+}
