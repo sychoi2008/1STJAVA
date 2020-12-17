@@ -22,6 +22,33 @@ public class MyClass {
         for(Integer number : numbers) {
             System.out.println(number);
         }
+        
+/* 작동 순서
+EX) {30 24 37 4 20 21}
+1) j = 0, m = 1일때, numbers[0] = 30 > numbers[1] = 24 이기에
+tmp = 30, numbers[0] = 24, numbers[1] = 30
+{24 30 37 4 20 21}
+
+2) j = 0, m = 2, numbers[0] = 24 > numbers[2] = 37 이기에 성립안됨
+
+3) j = 0, m = 3, numbers[0] = 24 > numbers[3] = 4 이기에 
+tmp = 24, numbers[0] = 4, numbers[3] = 24
+{4 30 37 24 20 21}
+
+
+
+
+
+*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
         System.out.println();
         // 내림차순
         for(int j = 0; j<numbers.length; j++) {
