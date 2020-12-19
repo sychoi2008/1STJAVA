@@ -25,6 +25,7 @@ public class MyClass {
         
 /* 작동 순서
 EX) {30 24 37 4 20 21}
+
 1) j = 0, m = 1일때, numbers[0] = 30 > numbers[1] = 24 이기에
 tmp = 30, numbers[0] = 24, numbers[1] = 30
 {24 30 37 4 20 21}
@@ -35,21 +36,50 @@ tmp = 30, numbers[0] = 24, numbers[1] = 30
 tmp = 24, numbers[0] = 4, numbers[3] = 24
 {4 30 37 24 20 21}
 
+4) j = 0, m = 4, numbers[0] = 4 > numbers[4] = 20 성립안됨
 
+5) j = 0, m = 5, numbers[0] = 4 > numbers[5] = 21 성립안됨
+// 이미 numbers[0]은 정리가 되었기 때문에 그 뒤에 1~5까지만 정리하면 된다.
 
+1) j = 1, m = 2, numbers[1] = 30 > numbers[2] = 37 성립안됨
 
+2) j = 1, m = 3, numbers[1] = 30 > numbers[3] = 24 이기에 
+tmp = 30, numbers[1] = 24, numbers[3] = 30 
+{4 24 37 30 20 21}
+
+3) j = 1, m = 4, numbers[1] = 24 > numbers[4] = 20 이기에 
+tmp = 24, numbers[1] = 20, numbers[4] = 24
+{4 20 37 30 24 21}
+
+4) j = 1, m = 5, numbers[1] = 20 > numbers[5] = 21 성립안됨
+
+1) j = 2, m = 3, numbers[2] = 37 > numbers[3] = 30 이기에 
+tmp = 37, numbers[2] = 30, numbers[3] = 37
+{4 20 30 37 24 21}
+
+2) j = 2, m = 4, numbers[2] = 30 > numbers[4] = 24 성립안됨
+
+3) j = 2, m = 5, numbers[2] = 30 > numbers[5] = 21 이기에
+tmp = 30, numbers[2] = 21, numbers[5] = 30
+{4 20 21 37 24 30}
+
+1) j = 3, m = 4, numbers[3] = 37 > numbers[4] = 24 이기에
+tmp = 37, numbers[3] = 24, numbers[4] = 37
+{4 20 21 24 37 30}
+
+2) j = 3, m = 5, numbers[3] = 24 > numbers[5] = 30 성립안됨
+
+1) j = 4, m = 5, numbers[4] = 37 > numbers[5] = 30 이기에
+tmp = 37, numbers[4] = 30, numbers[5] = 37
+{4 20 21 24 30 37}
+
+1) j = 5일때는 if문에 걸리지 않음 따라서 종료
 
 */
+
+
+        System.out.println(); // 구분을 위한 개행
         
-        
-        
-        
-        
-        
-        
-        
-        
-        System.out.println();
         // 내림차순
         for(int j = 0; j<numbers.length; j++) {
             for(int m = j+1; m<numbers.length; m++) {
