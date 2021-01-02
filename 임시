@@ -1,0 +1,33 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+
+        // 배열 문제
+        // (1)
+        int [] num = new int[5];
+
+        for(int j=0; j<num.length; j++)
+            num[j] = j+1;
+
+        for(int j=0; j<num.length; j++)
+            System.out.println(num[j]);
+
+        System.out.println("====================");
+        //(2)
+        int [] three = new int[10];
+
+        for(int j=0; j<three.length; j++) {
+            int number = scanner.nextInt();
+            three[j] = number;
+        }
+
+        for(int j=0; j<three.length; j++) {
+            if(three[j] % 3 == 0) System.out.println(three[j]);
+        }
+    }
+}
