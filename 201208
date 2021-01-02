@@ -105,3 +105,32 @@
       System.out.println();
    }
 */
+
+
+//오버라이딩, 오버로딩의 차이는?
+// 배열 : (1) 자료형 타입(int, String) (2) 대괄호 (3) 배열명  => 자료형 타입을 복수개 갖고 있다.
+
+   int [] numArray = new int[5]; // 배열 선언 : 메모리에 연속적으로 할당. 인트크기 다섯개를 할당해(new역할) 
+   numArray[0] = 0;
+   numArray[1] = 1;
+   numArray[2] = 2;
+   numArray[3] = 3;
+   numArray[4] = 4;
+        
+// 만약 배열의 인덱스를 초과한다면? bulid는 되지만 run은 되지 않는다. EX) newArray[5] = 5;
+// 만약 여기서 numArray을 다시 초기화한다면 ? 메모리 다시 재할당함. 이전 값은 실종
+
+   for(int i = 0; i<5; i++){
+      System.out.println(numArray[i]);
+      }
+      
+// list : 검색 X 느려
+// map  : 검색 O 빨라
+// 배열은 검색이 느리다. 하지만 삽입은 좋음
+        
+/* int num = 10;
+   int [] numArr = new int[num]; // c는 안되지만 자바는 된다.
+*/
+
+
+
