@@ -62,5 +62,5 @@ public class Main {
         while(true) {
             System.out.print("점수 입력 : ");
             int num = scanner.nextInt();
-            if (num < 0 || num>100) break;
+            if (num < 0 || num>100) break; //break대신 return;도 
         }
