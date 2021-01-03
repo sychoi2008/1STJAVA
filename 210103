@@ -82,11 +82,10 @@ public class Main {
         int a = (int)(Math.random()*100);
         Random random = new Random();
 
-
-
         int count = 0;
 
         System.out.println("*** 난수가 발생하였습니다...맞추어 보세요...***");
+        
         while(true) {
             int num = random.nextInt(10);
             System.out.println("숫자 입력 : " + num);
@@ -95,4 +94,5 @@ public class Main {
             else break;
             count++;
             }
+            
         System.out.println("추카추카..."+ count+ "번만에 맞추셨습니다..");
