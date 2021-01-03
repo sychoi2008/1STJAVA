@@ -14,3 +14,11 @@ public class Main {
 
     }
 }
+
+int money = scanner.nextInt();
+
+        System.out.println("money = "+money+"원");
+        System.out.println("만원 = " + money/10/10/10/10%10);
+        System.out.println("천원 = "+money/10/10/10%10);
+        System.out.println("백원 = "+money/10/10%10);
+        System.out.println("십원 = " + money/10%10);
