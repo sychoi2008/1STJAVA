@@ -33,6 +33,14 @@ public class Main {
         System.out.println("백원 = " + money/10/10%10);
         System.out.println("십원 = " + money/10%10);
         
+        //(3) 급여 명세서
+        int basic = 1500000;
+        int mon = 55000;
+        int tax = basic/10;
+
+        int real = basic + mon - tax;
+        System.out.println("실수령액 : "+ real);
+        
         //(4) 큰수
         int a = scanner.nextInt();
         int b = scanner.nextInt();
