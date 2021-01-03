@@ -42,6 +42,7 @@ public class Main {
         System.out.println("실수령액 : "+ real);
         
         //(4) 큰수
+        //삼항연산자 : (조건)? true : false;
         int a = scanner.nextInt();
         int b = scanner.nextInt();
 
@@ -49,3 +50,10 @@ public class Main {
         System.out.println("Input b : "+ b);
         int big = (a>b)? a:b;
         System.out.println("큰수 : " + big);
+        // System.out.println(a>b : a:b);
+        
+        
+        //(5)
+        System.out.print("점수 입력 : ");
+        int num = scanner.nextInt();
+        if (num < 0 || num>100) System.out.println("입력오류!!");
