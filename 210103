@@ -6,19 +6,29 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //(1) 형변환 문제
         String a = "100";
         String b = "200";
 
 
         System.out.println(Integer.parseInt(a) * Integer.parseInt(b));
 
-    }
-}
+        //해설
+        String str = scanner.nextLine();
 
-int money = scanner.nextInt();
+        double d = Double.parseDouble(str);
+
+        // int or Interger(class, include so many method)
+
+        int num1 = Integer.parseInt(a); //integer 타입으로 넘길것이므로
+        int num2 = Integer.parseInt(b);
+
+        //(2) 화폐의 갯수
+
+        int money = scanner.nextInt();
 
         System.out.println("money = "+money+"원");
         System.out.println("만원 = " + money/10/10/10/10%10);
-        System.out.println("천원 = "+money/10/10/10%10);
-        System.out.println("백원 = "+money/10/10%10);
+        System.out.println("천원 = " + money/10/10/10%10);
+        System.out.println("백원 = " + money/10/10%10);
         System.out.println("십원 = " + money/10%10);
