@@ -1,0 +1,16 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        String a = "100";
+        String b = "200";
+
+
+        System.out.println(Integer.parseInt(a) * Integer.parseInt(b));
+
+    }
+}
