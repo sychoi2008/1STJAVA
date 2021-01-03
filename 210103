@@ -64,3 +64,15 @@ public class Main {
             int num = scanner.nextInt();
             if (num < 0 || num>100) break; //break대신 return;도 
         }
+        
+        
+        //(6)
+        Random random = new Random();
+        int sum = 0;
+        for (int i = 1; i<=50; i++) {
+            int num = random.nextInt(100);
+            System.out.print(num+ "     ");
+            sum += num;
+            if(i%6==0) System.out.println();
+        }
+        System.out.println("\n"+"합="+sum);
