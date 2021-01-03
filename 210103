@@ -77,3 +77,22 @@ public class Main {
             if(i%6==0) System.out.println();
         }
         System.out.println("\n"+"합="+sum);
+        
+        //(7)
+        int a = (int)(Math.random()*100);
+        Random random = new Random();
+
+
+
+        int count = 0;
+
+        System.out.println("*** 난수가 발생하였습니다...맞추어 보세요...***");
+        while(true) {
+            int num = random.nextInt(10);
+            System.out.println("숫자 입력 : " + num);
+            if(a>num) System.out.println("컴퓨터의 숫자가 더 큽니다..");
+            else if(a<num) System.out.println("컴퓨터의 숫자가 더 작습니다..");
+            else break;
+            count++;
+            }
+        System.out.println("추카추카..."+ count+ "번만에 맞추셨습니다..");
