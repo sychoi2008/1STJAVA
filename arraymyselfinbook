@@ -68,10 +68,10 @@ public class MyClass {
         String[] words = {"television", "computer", "mouse", "phone" };
         
         for(int i = 0; i < words.length; i++) { //word.length == 4
-            char[] question = words[i].toCharArray(); // Q.char[] question = "television"; 이 되는건가? char배열은 이런식으로 선언을 하는건가?
+            char[] question = words[i].toCharArray(); // 문자열을 문자배열로 변환해서 반환한다.(
             
             for(int j = 0; j<question.length ; j++) { // char배열 question에 담긴 문자의 위치를 임의로 바꾸는 것. tneoliesiv 같이 값을 바꾸려는 반복문
-                int num = (int)(Math.random()*question.length); // 랜덤 index 값
+                int num = (int)(Math.random()*question.length); // 랜덤 index 값을 뽑는다. 범위는 각기 다른데 television일 경우는 0~9사이의 값을 뽑음.
                 char tmp; //question [j]에 있는 값을 임시 저장. Q. String tmp시에는 오류가 난다. 왜?? String은 사용못하는가?
                 
                 tmp = question[j]; // 예를들어, television이라고 한다면 question[0]은 t가 된다. 
@@ -90,4 +90,4 @@ public class MyClass {
         }
     }
 }
-// 왜 char[] question을 미리 선언하지 않고 for문 안에서 돌리는걸까? 저래도 되는걸까? 그러면 무한대로 값이 늘어가는건가?
+
