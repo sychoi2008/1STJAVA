@@ -11,7 +11,7 @@ public class MyClass {
     }
 }
 
-//2차원 배열 이용하는 것 하다 
+//2차원 배열 arr에 담긴 모든 값의 총합과 평균을 구하시오
 public class MyClass {
     public static void main(String args[]) {
         int [][] arr = {
@@ -26,11 +26,34 @@ public class MyClass {
         
         for(int i=0; i<arr.length ; i++){
             for(int j=0; j<arr[i].length; j++) {
-                total =+ arr[i][j];
+                total += arr[i][j];
             }
         }
-        average = (float)total/arr[0].length * arr
+        average = (float)total/(arr[0].length * arr.length);
         
-        System.out.println(average);
+        System.out.println("total="+total);
+        System.out.println("average="+average);
+    }
+}
+
+// 1~9사이의 중복되지 않은 숫자로 이루어진 3자리 숫자를 만들어내는 프로그램이다. 
+public class MyClass {
+    public static void main(String args[]) {
+        int [] ballArr = {1,2,3,4,5,6,7,8,9};
+        int [] ball3 = new int[3];
+        
+        for(int i=0; i<ballArr.length; i++) { //ballArr.length == 9
+            int j = (int)(Math.random() * ballArr.length); //0~8 중 하나 ballArr의 랜덤 index값을 뽑는 것
+            int tmp = 0;
+            
+            tmp = ballArr[i];
+            ballArr[i] = ballArr[j];
+            ballArr[j] = tmp;
+            
+        }
+        
+        for(int i=0; i<ball3.length; i++) ball3[i] = ballArr[i];
+        
+        for(int i=0; i<ball3.length; i++) System.out.print(ball3[i]);
     }
 }
