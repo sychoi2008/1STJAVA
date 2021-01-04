@@ -57,3 +57,37 @@ public class MyClass {
         for(int i=0; i<ball3.length; i++) System.out.print(ball3[i]);
     }
 }
+
+// 단어의 글자위치를 섞어서 보여주고 원래의 단어를 맞추는 예제
+import java.util.Scanner;
+
+public class MyClass {
+    public static Scanner scanner = new Scanner(System.in);
+    
+    public static void main(String args[]) {
+        String[] words = {"television", "computer", "mouse", "phone" };
+        
+        for(int i = 0; i < words.length; i++) { //word.length == 4
+            char[] question = words[i].toCharArray(); // Q.char[] question = "television"; 이 되는건가? char배열은 이런식으로 선언을 하는건가?
+            
+            for(int j = 0; j<question.length ; j++) { // char배열 question에 담긴 문자의 위치를 임의로 바꾸는 것. tneoliesiv 같이 값을 바꾸려는 반복문
+                int num = (int)(Math.random()*question.length); // 랜덤 index 값
+                char tmp; //question [j]에 있는 값을 임시 저장. Q. String tmp시에는 오류가 난다. 왜?? String은 사용못하는가?
+                
+                tmp = question[j]; // 예를들어, television이라고 한다면 question[0]은 t가 된다. 
+                question[j] = question[num]; //랜덤값을 인덱스로 가진, 즉, television에서 아무 문자나 뽑아 그것을 question[0]과 바꿔줌
+                question[num] = tmp; //question[0]값은 다시 랜덤 값을 인덱스로 가진 그 자리에 
+            } 
+            System.out.format("Q%d. %s의 정답을 입력하세요.>", i+1, new String(question)); 
+            //Q. new String(question)을 했을 때 왜 위치가 섞인 단어가 아니라 television처럼 똑바로 값이 나오는 가?
+            
+            String answer = scanner.nextLine();
+            
+            //equals()는 문자열의 내용이 같은지 확인
+            if (words[i].equals(answer.trim())) System.out.print("맞았습니다.\n\n"); //trim()은 answer의 좌우 공백을 제거함.
+            else System.out.print("틀렸습니다.\n\n");
+  
+        }
+    }
+}
+// 왜 char[] question을 미리 선언하지 않고 for문 안에서 돌리는걸까? 저래도 되는걸까? 그러면 무한대로 값이 늘어가는건가?
