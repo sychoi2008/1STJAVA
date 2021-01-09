@@ -16,22 +16,34 @@ public class Main {
         (2) 자료형 변수를 생성했던 것 처럼. 반환타입(short, int, long, void(반환하는 것이 없을 때) 또는 클래스) + 메소드 명으로 public static
         (3) 메소드 명을 붙혀준다.
         public String next 넥스트라는 이름의 string을 반환해주는 메소드
-        (4) 인자값
+        (4) 인자값 : 타입, 갯수 상관없이 들어갈 수 있다.
 
         EX) public static void prints() {
             System.out.println("hello world!");
         }
          */
-        prints();
+        //prints();
 
         // print1() 메소드 이름으로 만들어서 JAVA HI를 출력해라
+        //print1();
+        //int number = scanner.nextInt();
+        //print2(number); // 메소드의 인자 number와 메인 메소드 안의 number는 다르다.
+        // 정수 두개를 입력 받아서 메소드에 인자값으로 넘겨줘서 더한 값을 출력하는 메소드를 작성해보시오
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        plus(num1,num2);
 
-        print1();
     }
     public static void prints() {
         System.out.println("hello world!");
     }
     public static void print1() {
         System.out.println("JAVA HI");
+    }
+    public static void print2(int number){ //
+        System.out.println("메소드 출력 : " + number);
+    }
+    public static void plus(int x, int y){
+        System.out.println("더한 값 : "+ (x+y));
     }
 }
