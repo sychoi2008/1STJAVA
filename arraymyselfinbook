@@ -68,7 +68,11 @@ public class MyClass {
         String[] words = {"television", "computer", "mouse", "phone" };
         
         for(int i = 0; i < words.length; i++) { //word.length == 4
-            char[] question = words[i].toCharArray(); // 문자열을 문자배열로 변환해서 반환한다.(
+            char[] question = words[i].toCharArray(); // 문자열을 문자배열로 변환해서 반환한다.
+            // String word = words[i];
+            //if(word == null) continue;
+            //char [] question = word.toCharArray();
+            //이게 더 좋은 코드
             
             for(int j = 0; j<question.length ; j++) { // char배열 question에 담긴 문자의 위치를 임의로 바꾸는 것. tneoliesiv 같이 값을 바꾸려는 반복문
                 int num = (int)(Math.random()*question.length); // 랜덤 index 값을 뽑는다. 범위는 각기 다른데 television일 경우는 0~9사이의 값을 뽑음.
@@ -85,6 +89,7 @@ public class MyClass {
             
             //equals()는 문자열의 내용이 같은지 확인
             if (words[i].equals(answer.trim())) System.out.print("맞았습니다.\n\n"); //trim()은 answer의 좌우 공백을 제거함. 문자열 중간에 공백은 적용안됨. 주로 게임에서 아이디생성시
+            //if(words. equals(answer.trim())) asdfsad
             else System.out.print("틀렸습니다.\n\n");
   
         }
