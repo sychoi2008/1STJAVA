@@ -43,6 +43,15 @@ public class Main {
         mul(num1,num2);
         div(num1,num2);
 
+        //static
+        /*
+        왜 쓰는디...
+         */
+        // 메소드는 왜 쓰지?
+
+        // 반환타입이 있는 경우
+        int t = test();
+
 
 
     }
@@ -67,5 +76,20 @@ public class Main {
     public static void div(int x, int y){
         System.out.println("나눈 값 : "+(x/y));
     }
-}
+    public static int test(){
+        return 0;
+        /*
+        또는
+        int number = 10;
+        return number;
 
+        반환타입이 있는 경우는 반드시 return 을 포함해야 한다. int를 넘겨줘야 한다. return은 항상 메소드 끝(중괄호의 끝)에 있어야 한다.
+         */
+    }
+    public static String test3(){
+        String str = "set";
+        return str;
+        //return "tset";
+    }
+
+}
