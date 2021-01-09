@@ -24,7 +24,7 @@ public class Main {
          */
         prints();
 
-        // print1() 메소드 이름으로 만들어서 문자열을 출력하라
+        // print1() 메소드 이름으로 만들어서 JAVA HI를 출력해라
 
         print1();
     }
