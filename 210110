@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        //사칙연산을 출력을 했습니다. 4칙 연산된 메소드인데, 결과값을 리턴하는 메소드들을 작성해주세요.
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        System.out.println(plus(num1,num2));
+        System.out.println(minus(num1,num2));
+        System.out.println(mul(num1,num2));
+        System.out.println(div(num1,num2));
+
+    }
+    public static int plus(int x, int y) {
+        return x + y;
+    }
+    public static int minus(int x, int y){
+        return x-y;
+    }
+    public static int mul(int x, int y){
+        return x*y;
+    }
+    public static int div(int x, int y){
+        return x/y;
+    }
+}
