@@ -4,15 +4,21 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
+    //main메소드 안에서는 메소드를 구현할 수 없다. 즉, 메소드 안에 메소드를 정의하지 않는다.
+
     public static void main(String[] args) {
         //사칙연산을 출력을 했습니다. 4칙 연산된 메소드인데, 결과값을 리턴하는 메소드들을 작성해주세요.
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
+//        int num1 = scanner.nextInt();
+//        int num2 = scanner.nextInt();
 
-        System.out.println(plus(num1,num2));
-        System.out.println(minus(num1,num2));
-        System.out.println(mul(num1,num2));
-        System.out.println(div(num1,num2));
+//        System.out.println(plus(num1,num2));
+//        System.out.println(minus(num1,num2));
+//        System.out.println(mul(num1,num2));
+//        System.out.println(div(num1,num2));
+
+        //입력받은 정수의 구구단을 출력하는 메소드를 작성해주세요.
+        int index = scanner.nextInt();
+        gugu(index);
 
     }
     public static int plus(int x, int y) {
@@ -26,5 +32,10 @@ public class Main {
     }
     public static int div(int x, int y){
         return x/y;
+    }
+    public static void gugu(int num){
+        for(int i=1; i<=9; i++){
+            System.out.println(num+"*"+i+"="+(num*i));
+        }
     }
 }
