@@ -1,0 +1,46 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+    //main메소드 안에서는 메소드를 구현할 수 없다. 즉, 메소드 안에 메소드를 정의하지 않는다.
+
+    public static void main(String[] args) {
+        //클래스
+        /*
+        유사한 객체들을 묶어놓은 집합
+        붕어빵 틀
+
+        학생이 클래스. 김철수라는 학생이 객체.
+
+
+
+        /////////////////
+        //변수
+
+        //메소드
+         */
+        //public, private, protected의 차이점은?
+        //public : 집주소 -> 택배를 받을 때도 외부에 공개되어 있어서 모두가 알고 있다.
+        //private : 내 이메일, 패스워드 -> 내부적으로 나만 사용하는 것, 즉, 나만이 알고 있는 비밀번호
+        //protected : 내 집 비밀번호 -> 저도 알고 있고 가족들도 알고 있음 (외부에서는 모른다.)
+
+        //같은 클래스에서는 3가지 다 사용가능
+
+
+        //생성자 : 생성할 떄 호출이 된다.
+        // 앞에 반환타입이 없고 클래스명과 동일한 메소드
+        String str1 = new String();
+
+        //this : 이것 정도..
+        // 생성자를 왜 여러개 쓰는지? 오버로딩
+        // 객체 생성 방법
+        // 클래스 이름 클래스변수명 = new 클래스이름() <-- 사실은 생성자 호출
+        // 그 안에 있는 필드나 메소드에 접근하기 위해서는 '.'을 사용한다.
+
+        //자바에서 모든 클래스는 object 클래스를 상속받고 있다.
+
+    }
+
+}
