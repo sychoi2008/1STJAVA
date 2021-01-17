@@ -115,7 +115,7 @@ public class Person {
     }
 
     public void printperson(Person person) {
-    // public static void printperson은 왜 this를 사용하지
+    // public static void printperson은 왜 this를 사용하지 못하지?
         System.out.println("name : " + this.name);
         System.out.println("age : " + this.age);
         System.out.println("marriage : " + this.marrigage);
