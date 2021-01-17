@@ -12,30 +12,30 @@ public class Main {
         //왠만하면 private로 모든 변수를 하는게 좋다. 권장.
         //annotation : lombok. getter setter
 
-        james j = new james("James", 30 ,true, 3);
+        Person james = new Person();
+        james.name = "James";
+        james.age = 30;
+        james.marrigage = true;
+        james.children = 3;
+
+        james.printperson(james.name, james.age, james.marrigage, james.children);
+
 
     }
 
 }
-
 package com.company;
 
-public class james {
-    String name;
-    int age;
-    boolean marriage;
-    int children;
+public class Person {
+    public String name;
+    public int age;
+    public boolean marrigage;
+    public int children;
 
-    james(String name, int age, boolean marriage, int children) {
-        this.age = age;
-        this.name = name;
-        this.marriage = marriage;
-        this.children = children;
-
-
-        System.out.println("나이 : " + this.age);
-        System.out.println("이름 : " + this.name);
-        System.out.println("결혼여부 : " + this.marriage);
-        System.out.println("자녀 수 : " + this.children);
+    public static void printperson(String name, int age, boolean marrigage, int children) {
+        System.out.println("name : " + name);
+        System.out.println("age : " + age);
+        System.out.println("marriage : " + marrigage);
+        System.out.println("children : " + children);
     }
 }
