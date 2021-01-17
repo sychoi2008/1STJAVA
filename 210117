@@ -39,3 +39,51 @@ public class Person {
         System.out.println("children : " + children);
     }
 }
+
+================================================================================================================================================================================
+
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+    //main메소드 안에서는 메소드를 구현할 수 없다. 즉, 메소드 안에 메소드를 정의하지 않는다.
+
+    public static void main(String[] args) {
+        //default는 public
+        //클래스 안에 클래스 선언을 할 수 있다.
+        //왠만하면 private로 모든 변수를 하는게 좋다. 권장.
+        //annotation : lombok. getter setter
+
+        Person james = new Person("James", 30, true, 3);
+
+        james.printperson(james.name, james.age, james.marrigage, james.children);
+
+
+    }
+
+}
+
+package com.company;
+
+public class Person {
+    public String name;
+    public int age;
+    public boolean marrigage;
+    public int children;
+
+    Person(String name, int age, boolean marrigage, int children) {
+        this.name = name;
+        this.age = age;
+        this.marrigage = marrigage;
+        this.children = children;
+    }
+
+    public static void printperson(String name, int age, boolean marrigage, int children) {
+        System.out.println("name : " + name);
+        System.out.println("age : " + age);
+        System.out.println("marriage : " + marrigage);
+        System.out.println("children : " + children);
+    }
+}
